@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Evento dos Sonhos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    Catiúsica<br>
+                    &<br>
+                    Marcelo
+                </h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Form -->
+            <div class="upload-section" id="uploadSection">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h2>Compartilhe suas memórias especiais conosco</h2>
+                        <p>Ajude-nos a eternizar momentos especiais do nosso grande dia compartilhando suas fotos e vídeos.</p>
+</p>
+                    </div>
+
+                    <form id="uploadForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="guestName" class="form-label">
+                                <i class="fas fa-user"></i>
+                                Seu nome
+                            </label>
+                            <input 
+                                type="text" 
+                                id="guestName" 
+                                name="guestName" 
+                                class="form-input" 
+                                placeholder="Digite seu nome completo"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="files" class="form-label">
+                                <i class="fas fa-images"></i>
+                                Selecionar arquivos
+                            </label>
+                            <div class="file-input-wrapper">
+                                <input 
+                                    type="file" 
+                                    id="files" 
+                                    name="files" 
+                                    class="file-input" 
+                                    multiple 
+                                    accept="image/*,video/*"
+                                    required
+                                >
+                                <div class="file-input-display" id="fileInputDisplay">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Clique para selecionar arquivos</span>
+                                    <small>Fotos e vídeos até 50MB cada</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selected-files" id="selectedFiles"></div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-upload"></i>
+                            <span>Enviar Arquivos</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-section hidden" id="successSection">
+                <div class="success-card">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Arquivos enviados com sucesso!</h2>
+                    <p id="successMessage">Seus arquivos foram enviados para o evento.</p>
+                    <div class="uploaded-files" id="uploadedFiles"></div>
+                    <button class="new-upload-btn" id="newUploadBtn">
+                        <i class="fas fa-plus"></i>
+                        Enviar mais arquivos
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <div class="loading-overlay hidden" id="loadingOverlay">
+                <div class="loading-content">
+                    <div class="spinner"></div>
+                    <h3>Enviando arquivos...</h3>
+                    <p>Por favor, aguarde enquanto processamos seus arquivos</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Meu Evento dos Sonhos. <br> Criado com ❤️ para preservar suas memórias.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
