@@ -1,6 +1,6 @@
 {
   "name": "meu-evento-dos-sonhos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sistema completo para upload de arquivos em eventos",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "node index.js"
   },
   "engines": { 
-  "node": "18.x"
+  "node": "22.x"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
